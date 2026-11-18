@@ -1,0 +1,6 @@
+{
+  "name": "The Muscle Town",
+  "description": "The Muscle Town — Premium fitness club in North Nazimabad, Karachi. Modern cardio, strength training, free weights, group workouts, personal training, and sauna.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
