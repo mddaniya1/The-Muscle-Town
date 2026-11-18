@@ -210,10 +210,10 @@ export function Footer() {
                 y="112"
                 fill="#FFFFFF"
                 style={{
-                  fontFamily: '"Switzer", sans-serif',
-                  fontWeight: 500,
+                  fontFamily: '"Space Grotesk", sans-serif',
+                  fontWeight: 700,
                   fontSize: '124px',
-                  letterSpacing: '-0.055em',
+                  letterSpacing: '-0.045em',
                 }}
                 textLength="1120"
                 lengthAdjust="spacingAndGlyphs"

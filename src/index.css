@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 :root {
+  --font-heading: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
   --mt-canvas: #0b0b0c;
   --mt-card: #161618;
   --mt-ink: #ffffff;
@@ -35,8 +38,7 @@
   html {
     background-color: var(--mt-canvas);
     color: var(--mt-ink);
-    font-family: "Switzer", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-feature-settings: "blwf" on, "cv03" on, "cv04" on, "cv09" on, "cv11" on;
+    font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
@@ -45,8 +47,19 @@
   body {
     background-color: var(--mt-canvas);
     color: var(--mt-ink);
+    font-family: var(--font-body);
     margin: 0;
     overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
   }
 
   button,
@@ -54,8 +67,7 @@
   input,
   select,
   textarea {
-    font-family: inherit;
-    font-feature-settings: inherit;
+    font-family: var(--font-body);
   }
 
   *:focus-visible {
@@ -64,12 +76,13 @@
   }
 }
 
-/* Exact Thres / Switzer 14-style typographic hierarchy */
+/* Typographic hierarchy: Space Grotesk (bold headings H1-H6) & Inter (body, nav, buttons, labels) */
 .type-display {
+  font-family: var(--font-heading);
   font-size: 44px;
-  line-height: 1.04;
+  line-height: 1.02;
   letter-spacing: -0.035em;
-  font-weight: 500;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-display {
@@ -83,10 +96,11 @@
 }
 
 .type-heading {
+  font-family: var(--font-heading);
   font-size: 38px;
-  line-height: 1.06;
+  line-height: 1.05;
   letter-spacing: -0.035em;
-  font-weight: 500;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-heading {
@@ -100,10 +114,11 @@
 }
 
 .type-title {
+  font-family: var(--font-heading);
   font-size: 30px;
-  line-height: 1.12;
-  letter-spacing: -0.035em;
-  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-title {
@@ -117,10 +132,11 @@
 }
 
 .type-subtitle {
+  font-family: var(--font-heading);
   font-size: 24px;
   line-height: 1.15;
-  letter-spacing: -0.03em;
-  font-weight: 500;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-subtitle {
@@ -134,10 +150,11 @@
 }
 
 .type-card-title {
+  font-family: var(--font-heading);
   font-size: 19px;
   line-height: 1.15;
-  letter-spacing: -0.03em;
-  font-weight: 500;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-card-title {
@@ -151,6 +168,7 @@
 }
 
 .type-lead {
+  font-family: var(--font-body);
   font-size: 16.5px;
   line-height: 1.45;
   letter-spacing: -0.015em;
@@ -168,6 +186,7 @@
 }
 
 .type-body {
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.012em;
@@ -175,6 +194,7 @@
 }
 
 .type-small {
+  font-family: var(--font-body);
   font-size: 14.5px;
   line-height: 1.45;
   letter-spacing: -0.01em;
@@ -182,6 +202,7 @@
 }
 
 .type-label {
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.2;
   letter-spacing: -0.012em;
@@ -189,10 +210,11 @@
 }
 
 .type-quote {
+  font-family: var(--font-heading);
   font-size: 22px;
   line-height: 1.16;
-  letter-spacing: -0.035em;
-  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-quote {
@@ -206,10 +228,11 @@
 }
 
 .type-article-title {
+  font-family: var(--font-heading);
   font-size: 36px;
   line-height: 1.06;
   letter-spacing: -0.035em;
-  font-weight: 500;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-article-title {
@@ -223,10 +246,11 @@
 }
 
 .type-article-heading {
+  font-family: var(--font-heading);
   font-size: 25px;
   line-height: 1.15;
-  letter-spacing: -0.03em;
-  font-weight: 500;
+  letter-spacing: -0.028em;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-article-heading {
@@ -240,10 +264,11 @@
 }
 
 .type-article-sub {
+  font-family: var(--font-heading);
   font-size: 21px;
   line-height: 1.2;
   letter-spacing: -0.025em;
-  font-weight: 500;
+  font-weight: 700;
 }
 @media (min-width: 810px) {
   .type-article-sub {
@@ -257,6 +282,7 @@
 }
 
 .type-article-body {
+  font-family: var(--font-body);
   font-size: 17px;
   line-height: 1.65;
   letter-spacing: -0.01em;
